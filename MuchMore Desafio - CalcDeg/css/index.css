@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+body {
+    background-color: #EA3D3D;
+    position: relative;
+}
+
+body::after {
+    content: "";
+    height: var(--height, 0);
+    background: radial-gradient(transparent 0%, rgba(0, 0, 0, 0.2));
+    padding: 1px;
+    bottom: 50%;
+    left: 0;
+    display: block;
+    position: absolute;
+    transform: rotate(var(--deg, 0));
+    z-index: -2;
+}
+
+body::before {
+    content: "";
+    height: 217vh;
+    background: radial-gradient(transparent 50%, rgba(0, 0, 0, 0.2));
+    padding: 1px;
+    top: -563px;
+    right: 100vh;
+    display: block;
+    position: absolute;
+    transform: rotate(64deg);
+    z-index: -2;
+}
+
+.text {
+    width: 1040px;
+    margin: 0 auto;
+    margin-top: 200px;
+    animation: FadeInD 3s 1 alternate;
+}
+
+@keyframes FadeInD {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.text_div {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EA3D3D;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.text_p {
+    color: #FFFFFF;
+    font-size: 3.5em;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    line-height: 1.1em;
+}
+
+.text_p strong {
+    font-weight: 900;
+}
+
+.text_p::after {
+    content: "";
+    position: absolute;
+    display: block;
+    right: -70px;
+    top: -130%;
+    width: 400px;
+    height: 400px;
+    border: solid 6px rgba(255, 255, 255, .5);
+    z-index: -1;
+}
+
+.contador {
+    width: 1040px;
+    margin: 0 auto;
+    margin-top: 200px;
+    animation: FadeInU 3s 1 alternate;
+}
+
+@keyframes FadeInU {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.contador_ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contador_li {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.contador_li h3 {
+    font-size: 2.2em;
+    font-family: 'Rubik', sans-serif;
+}
+
+.contador_li p {
+    font-size: 1.5em;
+    font-family: 'Rubik', sans-serif;
+    margin-top: 5px;
+}

@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+
+body{
+    background: linear-gradient(90deg, #EA3D3D 50%, #35373A 50%);
+}
+body::before{
+    content: "";
+    height: 217vh;
+    background:radial-gradient(rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.2));
+    padding: 1px;
+    top: -563px;
+    display: block;
+    position: absolute;
+    transform: rotate(64deg);
+    right: 960px;
+    z-index: -2;
+}
+body::after{
+    content: "";
+    height: 217vh;
+    background:radial-gradient(rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.2));
+    padding: 1px;
+    top: -563px;
+    display: block;
+    position: absolute;
+    transform: rotate(-64deg);
+    right: 960px;
+    z-index: -2;
+}
+main{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Rubik', sans-serif;
+    color: #FFFFFF;
+    padding: 0 10%;
+}
+
+.info{
+    width: 25%;
+    animation: FadeInL 2s 1 alternate;
+}
+@keyframes FadeInL {
+    from {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+}
+.info_title{
+    font-size: 3.7em;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 30%;
+}
+.info_title strong{
+    font-size: 1.05em;
+    font-weight: 900;
+}
+.info_title::after{
+    content: "";
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: 30%;
+    border-bottom: solid 4px #FFFFFF;
+    left: 0;
+    bottom:-50px;
+}
+.info_text{
+    font-size: 1em;
+    line-height: 30px;
+    margin-bottom: 30%;
+    position: relative;
+}
+.info_text:after{
+    content: "";
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: 30%;
+    border-bottom: solid 4px #FFFFFF;
+    left: 0;
+    bottom:-50px;
+}
+.info_contact{
+    margin-bottom: 30px;
+}
+.info_contact strong{
+    font-size: 1.05em;
+    font-weight: 900;
+}
+
+.social-links{
+    font-size: 30px;
+}
+.social-links a{
+    width: 40px;
+    height: 40px;
+    line-height: 25px !important;
+    position: relative;
+    margin-top: 50px;
+    margin-right: 5px;
+    text-align: center;
+    display: inline-block;
+    color: #EA3D3D;
+    
+    -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);  
+    -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+    -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+    transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+}
+.social-links a i,
+.social-links a span{
+    position: relative;
+}
+.social-links a:before{
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    bottom: 11px;
+    background: rgba(255, 255, 255, .5);    
+}
+.social-links a:hover{
+    color: rgba(255, 255, 255, .5);
+}
+.social-links a:hover:before{
+    background: #EA3D3D;
+    border: 1px solid rgba(255, 255, 255, .5);
+}
+
+.form{
+    width: 65%;
+    background-color: #FFFFFF;
+    backdrop-filter: blur(10px);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5), 0px 10px 10px rgba(0, 0, 0, 0.5);
+    animation: FadeInR 3s 1 alternate;
+}
+@keyframes FadeInR {
+    from {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+}
+.form_form{
+    display: flex;
+    flex-direction: column;
+}
+.form_input, .form_text-area{
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 5%;
+    font-size: 1.3em;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom: solid 3px #EA3D3D;
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+.form_input:focus, .form_text-area:focus{
+    outline: none;
+    box-shadow: 0px 3px 5px rgba(255,255,255,0.5), 0px 0px 10px rgba(0,0,0,0.15);
+}
+.form_input:first-child{
+    margin-top: 5%;
+}
+.form_input::placeholder, .form_text-area::placeholder{
+    font-family: 'Rubik', sans-serif;
+    color: rgba(0, 0, 0, .5);
+    font-weight: 700;
+}
+
+.form_but{
+    width: 15%;
+    height: 40px;
+    margin-left: 10%;
+    background: transparent;
+    color: #EA3D3D;
+    border: solid #EA3D3D 3px;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing:2px;
+}
+.form_but:hover{
+    cursor: pointer;
+    transition: all 0.1s;
+    color: rgba(255, 255, 255, .9) ;
+    background: rgba(234, 61, 61, 1);
+    border: solid rgba(255, 255, 255, .9) 3px;
+}
+.form_but:active{
+    color: rgba(255, 255, 255, .5) ;
+    background: rgba(234, 61, 61, .5);
+    border: solid rgba(255, 255, 255, .5) 3px;
+    
+}
+@media (max-width: 1900px){
+    body::after, body::before{
+        display: none;
+        overflow: hidden;
+    }
+}
+@media (max-width: 1800px){
+    .info_title{
+        font-size: 3.3em;
+    }
+}
+@media (max-width: 1550px){
+    .info_title{
+        font-size: 2.8em;
+    }
+    .form_input, .form_text-area{
+        font-size: 1.1em;
+    }
+}
+@media (max-width: 1350px){
+    .info_title{
+        font-size: 2.2em;
+    }
+    .info_text{
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 1024px){
+    
+    main{
+        flex-direction: column;
+    }
+    .info{
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 10%;
+        backdrop-filter: blur(20px);
+        box-sizing: border-box;
+    }
+    .info_title{
+        font-size: 3em;
+    }
+    .info_text{
+        font-size: 1.5em;
+    }
+    .form{
+        width: 100%;
+        margin: 10px 0 20px 0;
+    }
+    .form_input, .form_text-area{
+        font-size: 1em;
+    }
+    .form_but{
+        margin-bottom: 10%;
+        font-size: 0.8em;
+        width: 50%;
+    }
+}
+@media (max-width: 500px){
+    .info_title{
+        font-size: 2.2em;
+    }
+    .info_text{
+        font-size: 1em;
+    }
+}
